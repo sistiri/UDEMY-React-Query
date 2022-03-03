@@ -24,7 +24,7 @@ export function InfinitePeople() {
   if (error) return <div className="error">Error! {error.toString()}</div>;
   return (
     <>
-      {isFetching && <div className="loading">Loading...</div>}
+    {isFetching && <div className="loading">Loading...</div>}
       <InfiniteScroll loadMore={fetchNextPage} hasMore={hasNextPage}>
         {data.pages.map((pageData) => {
           return pageData.results.map((person) => {
