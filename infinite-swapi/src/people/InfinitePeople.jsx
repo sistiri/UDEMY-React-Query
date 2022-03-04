@@ -16,7 +16,10 @@ export function InfinitePeople() {
       "sw-people",
       ({ pageParam = initialUrl }) => fetchUrl(pageParam),
       {
-        getNextPageParam: (lastPage) => lastPage.next || undefined,
+        getNextPageParam: (lastPage) => {
+          console.log(lastPage.next);
+          return lastPage.next || undefined;
+        },
       }
     );
 
